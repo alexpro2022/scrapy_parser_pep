@@ -17,8 +17,7 @@ class PepParsePipeline:
 
     def close_spider(self, spider):
         filename = f'status_summary_{dt.now().strftime(DATETIME_FORMAT)}.csv'
-        path = BASE_DIR / filename
-        with open(path, 'w', encoding=ENCODING) as file:
+        with open(BASE_DIR / filename, 'w', encoding=ENCODING) as file:
             writer = csv.writer(file, dialect='unix')
             writer.writerow(('Статус', 'Количество'))
             writer.writerows(self.status_counter.items())

@@ -10,8 +10,7 @@ class PepSpider(scrapy.Spider):
 
     def parse(self, response):
         yield from response.follow_all(
-            response.css(
-                'section[id^="numerical-index"]').css('tbody a'),
+            response.css('#numerical-index tbody a'),
             callback=self.parse_pep
         )
 
@@ -21,5 +20,5 @@ class PepSpider(scrapy.Spider):
             'number': int(number.split()[1]),
             'name': name,
             'status': response.css(
-                'dt:contains("Status") + dd').css('abbr::text').get(),
+                'dt:contains("Status") + dd abbr::text').get(),
         })
