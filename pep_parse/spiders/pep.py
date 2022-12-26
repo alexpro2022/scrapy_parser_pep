@@ -17,9 +17,8 @@ class PepSpider(scrapy.Spider):
 
     def parse_pep(self, response):
         number, name = response.css('h1.page-title::text').get().split(' – ')
-        number = int(number.split()[1])
         yield PepParseItem({
-            'number': number,
+            'number': int(number.split()[1]),
             'name': name,
             'status': response.css(
                 'dt:contains("Status") + dd').css('abbr::text').get(),

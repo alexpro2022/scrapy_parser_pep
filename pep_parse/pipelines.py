@@ -16,13 +16,10 @@ class PepParsePipeline:
         pass
 
     def close_spider(self, spider):
-        results_dir = BASE_DIR / 'results'
         filename = f'status_summary_{dt.now().strftime(DATETIME_FORMAT)}.csv'
-        path = results_dir / filename
-        results = [('Статус', 'Количество')]
-        for key, value in self.status_counter.items():
-            results.append((key, value))
-        results.append(('Total', sum(self.status_counter.values())))
+        path = BASE_DIR / filename
         with open(path, 'w', encoding=ENCODING) as file:
             writer = csv.writer(file, dialect='unix')
-            writer.writerows(results)
+            writer.writerow(('Статус', 'Количество'))
+            writer.writerows(self.status_counter.items())
+            writer.writerow(('Total', sum(self.status_counter.values())))
