@@ -1,3 +1,5 @@
+from .constants import EXT
+
 BOT_NAME = 'pep_parse'
 
 SPIDER_MODULES = ['pep_parse.spiders']
@@ -7,7 +9,7 @@ ROBOTSTXT_OBEY = True
 
 FEEDS = {
     'results/pep_%(time)s.csv': {
-        'format': 'csv',
+        'format': EXT,
         'fields': ['number', 'name', 'status'],
         'overwrite': False,
     },
