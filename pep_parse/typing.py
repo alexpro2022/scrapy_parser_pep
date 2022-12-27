@@ -1,11 +1,13 @@
-from scrapy import Item, http, Spider
+from typing import Iterable
+
+from scrapy import crawler, Item, http, Spider
 
 
+CrawlerType = crawler.Crawler
+ExceptionType = Exception
 ItemType = Item
+RequestType = http.Request
 ResponseType = http.Response
+ResultType = Iterable[ItemType]
 SpiderType = Spider
-
-# На ЯП не проходит тесты так как там Python 3.7
-# from typing import TypeAlias
-# ItemType: TypeAlias = PepParseItem
-# ResponseType: TypeAlias = Response
+StartRequestType = Iterable[RequestType]

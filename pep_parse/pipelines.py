@@ -2,8 +2,8 @@ import csv
 from datetime import datetime as dt
 
 from pep_parse.typing import ItemType, SpiderType
-
-from .constants import BASE_DIR, DATETIME_FORMAT, DIALECT, ENCODING, EXT
+from pep_parse.constants import (
+    BASE_DIR, CSV_TITLE, DATETIME_FORMAT, DIALECT, ENCODING, EXT, TOTAL)
 
 
 class PepParsePipeline:
@@ -22,6 +22,6 @@ class PepParsePipeline:
             f'status_summary_{dt.now().strftime(DATETIME_FORMAT)}.{EXT}')
         with open(BASE_DIR / filename, 'w', encoding=ENCODING) as file:
             writer = csv.writer(file, dialect=DIALECT)
-            writer.writerow(('Статус', 'Количество'))
+            writer.writerow(CSV_TITLE)
             writer.writerows(self.status_counter.items())
-            writer.writerow(('Total', sum(self.status_counter.values())))
+            writer.writerow((TOTAL, sum(self.status_counter.values())))

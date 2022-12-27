@@ -1,7 +1,7 @@
-import scrapy
+from scrapy import Field, Item
 
 
-class PepParseItem(scrapy.Item):
-    number = scrapy.Field()
-    name = scrapy.Field()
-    status = scrapy.Field()
+class PepParseItem(Item):
+    number = Field()
+    name = Field()
+    status = Field()
