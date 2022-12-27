@@ -1,7 +1,7 @@
 from scrapy import Item, http, Spider
 
 
-ItemType = Item | dict
+ItemType = Item
 ResponseType = http.Response
 SpiderType = Spider
 
