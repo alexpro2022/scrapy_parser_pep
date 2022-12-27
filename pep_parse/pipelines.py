@@ -1,15 +1,9 @@
 import csv
 from datetime import datetime as dt
-from typing import TypeAlias
 
-from pep_parse.typing import ItemType
+from pep_parse.typing import ItemType, SpiderType
 
 from .constants import BASE_DIR, DATETIME_FORMAT, DIALECT, ENCODING, EXT
-
-from .spiders.pep import PepSpider
-
-
-SpiderType: TypeAlias = PepSpider
 
 
 class PepParsePipeline:

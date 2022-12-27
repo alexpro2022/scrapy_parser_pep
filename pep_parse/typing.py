@@ -1,8 +1,11 @@
-from typing import TypeAlias
+from scrapy import Item, http, Spider
 
-from scrapy.http import Response
 
-from .items import PepParseItem
+ItemType = Item | dict
+ResponseType = http.Response
+SpiderType = Spider
 
-ItemType: TypeAlias = PepParseItem
-ResponseType: TypeAlias = Response
+# На ЯП не проходит тесты так как там Python 3.7
+# from typing import TypeAlias
+# ItemType: TypeAlias = PepParseItem
+# ResponseType: TypeAlias = Response
