@@ -1,26 +1,29 @@
 import csv
 from datetime import datetime as dt
+from collections import defaultdict
 
 from pep_parse.typing import ItemType, SpiderType
 from pep_parse.constants import (
-    BASE_DIR, CSV_TITLE, DATETIME_FORMAT, DIALECT, ENCODING, EXT, TOTAL)
+    BASE_DIR, CSV_TITLE, DATETIME_FORMAT,
+    DIALECT, ENCODING, EXT, RESULTS_DIR, TOTAL
+)
 
 
 class PepParsePipeline:
-    status_counter = {}
-
-    def process_item(self, item: ItemType, spider: SpiderType) -> ItemType:
-        status = item['status']
-        self.status_counter[status] = self.status_counter.get(status, 0) + 1
-        return item
 
     def open_spider(self, spider: SpiderType) -> None:
-        pass
+        self.status_counter = defaultdict(int)
+
+    def process_item(self, item: ItemType, spider: SpiderType) -> ItemType:
+        self.status_counter[item['status']] += 1
+        return item
 
     def close_spider(self, spider: SpiderType) -> None:
         filename = (
             f'status_summary_{dt.now().strftime(DATETIME_FORMAT)}.{EXT}')
-        with open(BASE_DIR / filename, 'w', encoding=ENCODING) as file:
+        res_dir = BASE_DIR / RESULTS_DIR
+        res_dir.mkdir(exist_ok=True)
+        with open(res_dir / filename, 'w', encoding=ENCODING) as file:
             writer = csv.writer(file, dialect=DIALECT)
             writer.writerow(CSV_TITLE)
             writer.writerows(self.status_counter.items())

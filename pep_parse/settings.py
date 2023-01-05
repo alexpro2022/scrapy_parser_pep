@@ -1,4 +1,4 @@
-from .constants import EXT
+from .constants import EXT, RESULTS_DIR
 
 BOT_NAME = 'pep_parse'
 
@@ -7,10 +7,15 @@ NEWSPIDER_MODULE = 'pep_parse.spiders'
 
 ROBOTSTXT_OBEY = True
 
+FEED_EXPORT_FIELDS = {
+    'number': 'Номер',
+    'name': 'Имя',
+    'status': 'Статус',
+}
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    f'{RESULTS_DIR}/pep_%(time)s.csv': {
         'format': EXT,
-        'fields': ['number', 'name', 'status'],
+        # 'fields': ['number', 'name', 'status'],
         'overwrite': False,
     },
 }
