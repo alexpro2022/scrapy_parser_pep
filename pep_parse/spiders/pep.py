@@ -16,7 +16,7 @@ class PepSpider(Spider):
         )
 
     def parse_pep(self, response: ResponseType) -> ItemType:
-        number, name = response.css('h1.page-title::text').get().split(' – ')
+        number, name = response.css('.page-title::text').get().split(' – ')
         yield PepParseItem({
             'number': int(number.split()[1]),
             'name': name,
