@@ -1,4 +1,7 @@
 # Проект: Асинхронный парсер документов PEP на базе фреймворка Scrapy
+[![status](https://github.com/alexpro2022/scrapy_parser_pep/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/scrapy_parser_pep/actions)
+[![codecov](https://codecov.io/gh/alexpro2022/scrapy_parser_pep/branch/main/graph/badge.svg?token=Y6507M6P3U)](https://codecov.io/gh/alexpro2022/scrapy_parser_pep)
+
 
 ## Оглавление
 - [Технологии](#технологии)
