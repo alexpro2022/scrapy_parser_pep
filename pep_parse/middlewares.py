@@ -1,14 +1,8 @@
 from scrapy import signals
 
-from pep_parse.typing import (
-    CrawlerType,
-    ExceptionType,
-    RequestType,
-    ResponseType,
-    ResultType,
-    SpiderType,
-    StartRequestType,
-)
+from pep_parse.typing import (CrawlerType, ExceptionType, RequestType,
+                              ResponseType, ResultType, SpiderType,
+                              StartRequestType)
 
 
 class PepParseSpiderMiddleware:

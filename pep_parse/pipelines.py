@@ -1,12 +1,10 @@
 import csv
-from datetime import datetime as dt
 from collections import defaultdict
+from datetime import datetime as dt
 
+from pep_parse.constants import (BASE_DIR, CSV_TITLE, DATETIME_FORMAT,
+                                 ENCODING, EXT, RESULTS_DIR, TOTAL)
 from pep_parse.typing import ItemType, SpiderType
-from pep_parse.constants import (
-    BASE_DIR, CSV_TITLE, DATETIME_FORMAT,
-    ENCODING, EXT, RESULTS_DIR, TOTAL
-)
 
 
 class PepParsePipeline:

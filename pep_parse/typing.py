@@ -1,7 +1,6 @@
 from typing import Iterable
 
-from scrapy import crawler, Item, http, Spider
-
+from scrapy import Item, Spider, crawler, http
 
 CrawlerType = crawler.Crawler
 ExceptionType = Exception
