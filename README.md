@@ -14,9 +14,9 @@
 ## Технологии
 
 
-**Языки программирования, модули и библиотеки:**
+**Языки программирования, библиотеки и модули:**
 
-[![Python](https://warehouse-camo.ingress.cmh1.psfhosted.org/7c5873f1e0f4375465dfebd35bf18f678c74d717/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f7072657474797461626c652e7376673f6c6f676f3d707974686f6e266c6f676f436f6c6f723d464645383733)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue?logo=python)](https://www.python.org/)
 [![csv](https://img.shields.io/badge/-csv-464646?logo=python)](https://docs.python.org/3/library/csv.html)
 [![collections](https://img.shields.io/badge/-collections-464646?logo=python)](https://docs.python.org/3/library/collections.html)
 [![datetime](https://img.shields.io/badge/-datetime-464646?logo=python)](https://docs.python.org/3/library/datetime.html)
@@ -31,7 +31,7 @@
 [![XPath](https://img.shields.io/badge/-XPath_selectors-464646?logo=XPath)](https://docs.scrapy.org/en/latest/topics/selectors.html#working-with-xpaths)
 
 
-**Тесты:**
+**Тестирование:**
 
 [![Pytest](https://img.shields.io/badge/-Pytest-464646?logo=Pytest)](https://docs.pytest.org/en/latest/)
 [![Pytest-cov](https://img.shields.io/badge/-Pytest--cov-464646?logo=Pytest)](https://pytest-cov.readthedocs.io/en/latest/)
