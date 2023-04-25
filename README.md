@@ -47,6 +47,7 @@
 [⬆️Оглавление](#оглавление)
 
 
+
 ## Описание работы
 Парсер собирает ссылки на документы PEP со стартовой страницы по адресу https://peps.python.org/ 
 и переходит по каждой ссылке, чтобы получить актуальную информацию о каждом PEP документе.
@@ -57,6 +58,7 @@
 Файлы создаются в папке **results** в корне проекта.
 
 [⬆️Оглавление](#оглавление)
+
 
 
 ## Установка:
@@ -74,26 +76,22 @@ cd scrapy_parser_pep
 ```
 python -m venv venv
 ```
-* Если у вас Linux/macOS
+  * Если у вас Linux/macOS
 
-    ```
     source venv/bin/activate
-    ```
-
+    
 * Если у вас windows
 
-    ```
     source venv/Scripts/activate
-    ```
+
 
 4. Установить все необходимые зависимости из файла **requirements.txt**:
 ```
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-pip list
+python -m pip install --upgrade pip && pip install -r requirements.txt
 ```
 
 [⬆️Оглавление](#оглавление)
+
 
 
 ## Запуск:
