@@ -76,13 +76,13 @@ cd scrapy_parser_pep
 ```
 python -m venv venv
 ```
-  * Если у вас Linux/macOS
+   * Если у вас Linux/macOS
 
-  source venv/bin/activate
-    
-  * Если у вас windows
+    source venv/bin/activate
 
-  source venv/Scripts/activate
+   * Если у вас windows
+
+    source venv/Scripts/activate
 
 
 4. Установить все необходимые зависимости из файла **requirements.txt**:
