@@ -97,7 +97,7 @@ python -m pip install --upgrade pip && pip install -r requirements.txt
 ## Запуск:
 
 ```
-(venv) $ scrapy crawl pep
+scrapy crawl pep
 ```
 
 [⬆️Оглавление](#оглавление)
