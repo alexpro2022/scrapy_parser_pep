@@ -6,13 +6,12 @@
 ## Оглавление
 - [Технологии](#технологии)
 - [Описание работы](#описание-работы)
-- [Установка](#установка)
-- [Запуск](#запуск)
+- [Установка и запуск](#установка-и-запуск)
 - [Автор](#автор)
 
 
 ## Технологии
-
+<details><summary>Развернуть</summary>
 
 **Языки программирования, библиотеки и модули:**
 
@@ -45,7 +44,7 @@
 [![Telegram](https://img.shields.io/badge/-Telegram-464646?logo=Telegram)](https://core.telegram.org/api)
 
 [⬆️Оглавление](#оглавление)
-
+</details>
 
 
 ## Описание работы
@@ -61,41 +60,29 @@
 
 
 
-## Установка:
-1. Клонировать репозиторий с GitHub:
+## Установка и запуск:
+Удобно использовать принцип copy-paste - копировать команды из GitHub Readme и вставлять в командную строку Git Bash или IDE (например VSCode).
+1. Клонируйте репозиторий с GitHub:
 ```
-git clone git@github.com:alexpro2022/scrapy_parser_pep
-```
-
-2. Перейти в созданную директорию проекта:
-```
-cd scrapy_parser_pep
+git clone git@github.com:alexpro2022/scrapy_parser_pep && cd scrapy_parser_pep
 ```
 
-3. Создать и активировать виртуальное окружение:
-```
-python -m venv venv
-```
+2. Создайте и активируйте виртуальное окружение:
    * Если у вас Linux/macOS
+   ```
+    python -m venv venv && source venv/bin/activate
+   ```
+   * Если у вас Windows
+   ```
+    python -m venv venv && source venv/Scripts/activate
+   ```
 
-    source venv/bin/activate
-
-   * Если у вас windows
-
-    source venv/Scripts/activate
-
-
-4. Установить все необходимые зависимости из файла **requirements.txt**:
+3. Установите в виртуальное окружение все необходимые зависимости из файла **requirements.txt**:
 ```
-python -m pip install --upgrade pip && pip install -r requirements.txt
+python -m pip install --upgrade pip && pip install -r yatube/requirements.txt
 ```
 
-[⬆️Оглавление](#оглавление)
-
-
-
-## Запуск:
-
+4. Запустите приложение:
 ```
 scrapy crawl pep
 ```
