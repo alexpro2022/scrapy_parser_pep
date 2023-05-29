@@ -64,7 +64,7 @@
 Удобно использовать принцип copy-paste - копировать команды из GitHub Readme и вставлять в командную строку Git Bash или IDE (например VSCode).
 1. Клонируйте репозиторий с GitHub:
 ```
-git clone git@github.com:alexpro2022/scrapy_parser_pep && cd scrapy_parser_pep
+git clone https://github.com/alexpro2022/scrapy_parser_pep.git && cd scrapy_parser_pep
 ```
 
 2. Создайте и активируйте виртуальное окружение:
@@ -79,12 +79,23 @@ git clone git@github.com:alexpro2022/scrapy_parser_pep && cd scrapy_parser_pep
 
 3. Установите в виртуальное окружение все необходимые зависимости из файла **requirements.txt**:
 ```
-python -m pip install --upgrade pip && pip install -r yatube/requirements.txt
+python -m pip install --upgrade pip && pip install -r requirements.txt
 ```
 
 4. Запустите приложение:
 ```
 scrapy crawl pep
+```
+
+5. Посмотреть содержимое папки **results** можно выполнив команду:
+```
+cd result && ls
+```
+В командной строке будут выведены имена всех файлов из папки.
+
+6. Содержимое файлов можно посмотреть, выполнив команду:
+```
+cat <имя файла>
 ```
 
 [⬆️Оглавление](#оглавление)
