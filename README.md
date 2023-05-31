@@ -64,38 +64,38 @@
 ## Установка и запуск:
 Удобно использовать принцип copy-paste - копировать команды из GitHub Readme и вставлять в командную строку Git Bash или IDE (например VSCode).
 1. Клонируйте репозиторий с GitHub:
-```
+```bash
 git clone https://github.com/alexpro2022/scrapy_parser_pep.git && cd scrapy_parser_pep
 ```
 
 2. Создайте и активируйте виртуальное окружение:
    * Если у вас Linux/macOS
-   ```
+   ```bash
     python -m venv venv && source venv/bin/activate
    ```
    * Если у вас Windows
-   ```
+   ```bash
     python -m venv venv && source venv/Scripts/activate
    ```
 
 3. Установите в виртуальное окружение все необходимые зависимости из файла **requirements.txt**:
-```
+```bash
 python -m pip install --upgrade pip && pip install -r requirements.txt
 ```
 
 4. Запустите приложение:
-```
+```bash
 scrapy crawl pep
 ```
 
 5. Посмотреть содержимое папки **results** можно выполнив команду:
-```
+```bash
 cd results && ls
 ```
 В командной строке будут выведены имена всех файлов из папки.
 
 6. Содержимое файлов можно посмотреть, выполнив команду:
-```
+```bash
 cat <имя файла>
 ```
 
@@ -104,7 +104,7 @@ cat <имя файла>
 
 ## Удаление:
 Для удаления проекта выполните команду (дважды - если вы в папке results):
-```
+```bash
 cd .. && rm -fr scrapy_parser_pep && deactivate
 ```
 
